@@ -1,52 +1,128 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>🎉 Happy Birthday Da! 🎉</title>
+    <title>💖 Happy Birthday SD 💖</title>
+
     <style>
-        body { 
-            background: linear-gradient(to right, #ff7e5f, #feb47b); 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            color: white; 
-            padding: 50px;
-            animation: fadeIn 2s;
+        body {
+            margin: 0;
+            height: 100vh;
+            background: url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=3840&q=80");
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        h1 { 
-            font-size: 4em; 
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            animation: pop 1.5s ease-in-out infinite alternate;
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
         }
 
-        img { 
-            width: 300px; 
-            border-radius: 20px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            margin-top: 20px;
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 30px;
+            animation: fadeIn 3s ease;
         }
 
-        p { 
-            font-size: 2em; 
-            margin: 20px; 
+        h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            animation: glow 2s infinite alternate;
         }
 
-        @keyframes pop {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .kavi {
+            margin-top: 30px;
+            font-size: 1.4em;
+            line-height: 1.8;
+            color: #ffe6eb;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+            animation: fadeIn 4s ease;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 20px;
+            animation: float 6s linear infinite;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff9aa2; }
+            to { text-shadow: 0 0 25px #ff4d6d; }
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>🎂 Happy Birthday Da Macha! 🎂</h1>
-    <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Birthday Cake">
-    <p>🔥 Iniya Piranthanaal Vazhthukkal Da 🔥</p>
-    <p>🎉 Un life full ah success & happiness irukkanum 🎉</p>
+
+<div class="overlay"></div>
+
+<div class="content">
+    <h1>💖 Happy Birthday SD 💖</h1>
+    <h2>🎂 Iniya Piranthanaal Vazhthukkal 🎂</h2>
+
+    <div class="kavi">
+        🌸 Intru pirantha oru naal mattum illa,<br>
+        En manasukku pirantha naal idhu…<br><br>
+
+        ⏳ Netru ninaivugal sirikkum,<br>
+        🌅 Nalai kanavugal malarum,<br>
+        ❤️ Aanaal indru…<br>
+        Un sirippu thaan en ulagame, SD 💖<br><br>
+
+        🎂 Iniya Piranthanaal Vazhthukkal SD 🎂<br>
+        Un vazhkkai muzhuvadhum<br>
+        Kadhal, santhosham, amaithi mattum irukkanum ✨
+    </div>
+</div>
+
+<!-- 🎵 Background Music -->
+<audio autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/4kadhale-kadhale.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ❤️ Floating Hearts Animation -->
+<script>
+    for (let i = 0; i < 45; i++) {
+        let heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+        heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+        document.body.appendChild(heart);
+    }
+</script>
+
 </body>
 </html>
