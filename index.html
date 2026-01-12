@@ -106,10 +106,19 @@
     </div>
 </div>
 
-<!-- 🎵 Background Music -->
-<audio autoplay loop>
+<button id="playBtn">🎵 Play Song</button>
+
+<audio id="bgMusic" loop>
     <source src="https://dl.dropboxusercontent.com/scl/fi/4kadhale-kadhale.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+    document.getElementById("playBtn").onclick = function () {
+        document.getElementById("bgMusic").play();
+        this.style.display = "none";
+    };
+</script>
+
 
 <!-- ❤️ Floating Hearts Animation -->
 <script>
@@ -126,3 +135,4 @@
 
 </body>
 </html>
+
